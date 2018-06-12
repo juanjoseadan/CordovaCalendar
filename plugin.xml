@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-calendar" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>CordovaCalendar</name>
+    
+    <js-module name="CordovaCalendar" src="www/CordovaCalendar.js">
+        <clobbers target="cordova.plugins.CordovaCalendar" />
+    </js-module>
+    
+    <!-- <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="CordovaCalendar">
+                <param name="android-package" value="cordovacalendar.CordovaCalendar" />
+            </feature>
+        </config-file>
+        
+        <config-file parent="/*" target="AndroidManifest.xml" />
+        <source-file src="src/android/CordovaCalendar.java" target-dir="src/cordova-calendar/CordovaCalendar" />
+    </platform> -->
+    
+    <platform name="ios">
+        <config-file parent="/*" target="config.xml">
+            <feature name="CordovaCalendar">
+                <param name="ios-package" value="CordovaCalendar" />
+            </feature>
+        </config-file>
+
+        <source-file src="src/ios/CordovaCalendar.m" />
+        <source-file src="src/ios/CordovaCalendar.h" />
+    </platform>
+</plugin>
